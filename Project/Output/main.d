@@ -19,3 +19,5 @@
 .\output\main.o: ..\User\constantes.h
 .\output\main.o: ..\Libraries\LCP1768_StdPeriph_Driver\include\lpc17xx_i2c.h
 .\output\main.o: C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdio.h
+.\output\main.o: C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdlib.h
+.\output\main.o: C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\time.h
