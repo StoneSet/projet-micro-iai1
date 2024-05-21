@@ -21,3 +21,4 @@
 .\output\main.o: C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdio.h
 .\output\main.o: C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdlib.h
 .\output\main.o: C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\time.h
+.\output\main.o: ..\User\gestion_pinsel.h

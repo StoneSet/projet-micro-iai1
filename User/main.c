@@ -21,6 +21,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+#include "gestion_pinsel.h"
+
 	
 
 //===========================================================//
@@ -54,6 +56,9 @@ int main(void)
 	  // Init(); // init variables globales et pinsel pour IR => à faire
 	
 	  lcd_Initializtion(); // init pinsel ecran et init LCD
+		pin_init();
+		touch_init();
+	
 		// affichage sur l'écran d'un exemple de 4 carrés de couleur et d'une chaine de caractère
 		n=sprintf(chaine,"Meilleur score: ");
 	  LCD_write_english_string (32,30,chaine,White,Blue);
