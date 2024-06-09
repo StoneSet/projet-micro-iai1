@@ -24,7 +24,9 @@ uint16_t addr = 0x01; // Adresse de départ pour l'EEPROM
 uint8_t data_recup = 0;
 int nombre = 0;
 
-// Fonction générique pour écrire des données dans l'EEPROM
+//================================================
+// Fonctions pour écrire des données dans l'EEPROM
+//================================================
 void writeEEPROM(uint16_t address, uint8_t value) {
     uint8_t data[2];
     data[0] = (uint8_t)address;  // Première partie de l'adresse mémoire où écrire
@@ -117,14 +119,18 @@ void TIMER0_IRQHandler(void) {
     }
 }
 
+//================================================
 // Fonction pour redémarrer le compteur
+//================================================
 void restartCount(void) {
     process = 1;
     sprintf(chaine, "%s", "Current state : Restart");
     LCD_write_english_string(10, 140, chaine, White, Red);
 }
 
+//================================================
 // Fonction pour arrêter le compteur
+//================================================
 void stopCount(void) {
     if (process == 0) { // Si le timer n'est pas en cours d'exécution
         nombre = 0; // Réinitialiser le compteur mais pas la mémoire
@@ -138,9 +144,11 @@ void stopCount(void) {
     }
 }
 
+//================================================
 // Fonction pour vérifier l'état du bouton
+//================================================
 void checkButtonPress(void) {
-    // Vérifiez l'état du bouton (la configuration est faite dans pin_init)
+    // Vérifiez l'état du bouton
     if (!(LPC_GPIO2->FIOPIN & (1 << BUTTON_PIN))) { // Si P2.10 est à l'état bas (bouton pressé)
         writedata(nombre);
         while (!(LPC_GPIO2->FIOPIN & (1 << BUTTON_PIN))); // Attendre que le bouton soit relâché

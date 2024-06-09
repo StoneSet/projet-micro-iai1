@@ -69,6 +69,9 @@ void screenPat() {
     }
 }
 
+//================================================
+//dessiner l'UI et les textes
+//================================================
 void init_ui() {
 		lcd_clear(Grey);
 		//text init
