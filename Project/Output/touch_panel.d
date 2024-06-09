@@ -16,4 +16,3 @@
 .\output\touch_panel.o: ..\Libraries\LCP1768_StdPeriph_Driver\include\lpc17xx_ssp.h
 .\output\touch_panel.o: C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdio.h
 .\output\touch_panel.o: ..\User\global.h
-.\output\touch_panel.o: ..\User\constantes.h

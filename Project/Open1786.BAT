@@ -1,4 +1,4 @@
-SET PATH=C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\IntelSWToolsMPI\compilers_and_libraries_2020.4.321\windows\mpi\intel64\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\wapt;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;c:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin\;c:\Program Files\IVI Foundation\VISA\Win64\Bin\;c:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files\MATLAB\MATLAB Runtime\v96\runtime\win64;C:\Program Files\Keysight\IO Libraries Suite\bin;c:\Program Files\IVI Foundation\VISA\Win64\ktvisa;C:\Program Files (x86)\Keysight\IO Libraries Suite\bin;c:\Program Files (x86)\IVI Foundation\VISA\WinNT\ktvisa;c:\Program Files (x86)\IVI Foundation\IVI\bin;c:\Program Files\IVI Foundation\IVI\bin;C:\Program Files (x86)\IVI Foundation\VISA\winnt\agvisa;c:\Program Files\PuTTY\;C:\Users\vderouet\AppData\Local\Microsoft\WindowsApps;;C:\modeltech64_10.2a\win64;C:\intelFPGA\20.1\modelsim_ase\win32aloem
+SET PATH=C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\IntelSWToolsMPI\compilers_and_libraries_2020.4.321\windows\mpi\intel64\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\wapt;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;c:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin\;c:\Program Files\IVI Foundation\VISA\Win64\Bin\;c:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files\MATLAB\MATLAB Runtime\v96\runtime\win64;C:\Program Files\Keysight\IO Libraries Suite\bin;c:\Program Files\IVI Foundation\VISA\Win64\ktvisa;C:\Program Files (x86)\Keysight\IO Libraries Suite\bin;c:\Program Files (x86)\IVI Foundation\VISA\WinNT\ktvisa;c:\Program Files (x86)\IVI Foundation\IVI\bin;c:\Program Files\IVI Foundation\IVI\bin;C:\Program Files (x86)\IVI Foundation\VISA\winnt\agvisa;c:\Program Files\PuTTY\;C:\Users\vderouet\AppData\Local\Microsoft\WindowsApps;;C:\modeltech64_10.2a\win64;C:\intelFPGA\20.1\modelsim_ase\win32aloem
 SET CPU_TYPE=LPC1768
 SET CPU_VENDOR=NXP
 SET UV2_TARGET=Open1786
@@ -14,6 +14,7 @@ SET CPU_CLOCK=0x00B71B00
 "C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\ArmCC" --Via ".\output\lpc17xx_nvic.__i"
 "C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\ArmCC" --Via ".\output\lpc17xx_ssp.__i"
 "C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\ArmCC" --Via ".\output\lpc17xx_i2c.__i"
+"C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\ArmCC" --Via ".\output\gestion_i2c.__i"
 "C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\ArmCC" --Via ".\output\main.__i"
 "C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\ArmCC" --Via ".\output\ili_lcd_general.__i"
 "C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\ArmCC" --Via ".\output\lcd_api.__i"
@@ -21,5 +22,6 @@ SET CPU_CLOCK=0x00B71B00
 "C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\ArmCC" --Via ".\output\affichagelcd.__i"
 "C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\ArmCC" --Via ".\output\touch_panel.__i"
 "C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\ArmCC" --Via ".\output\gestion_pinsel.__i"
+"C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\ArmCC" --Via ".\output\gestion_timer.__i"
 "C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\ArmLink" --Via ".\Output\Project.lnp"
 "C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\fromelf.exe" ".\Output\Project.axf" --i32combined --output ".\Output\Project.hex"

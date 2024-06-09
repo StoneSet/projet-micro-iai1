@@ -1,32 +1,22 @@
 #include "gestion_pinsel.h"
-
-#include "lpc17xx_pinsel.h"
 #include "lpc17xx_gpio.h"
+#include "lpc17xx_pinsel.h"
 
+//fonction d'initialisation des broches I/O
 void pin_init(void) {
-	//La reset value des pinsels sont à 00, qui correspond à l'initialisation 
-	//des pin au GPIO
-		
-	// Broches gestion de la mémoire
-	
-	PINSEL_CFG_Type configPinsel1;
-	configPinsel1.Portnum = PINSEL_PORT_0;
-	configPinsel1.Pinnum = PINSEL_PIN_27;
-	configPinsel1.Funcnum = PINSEL_FUNC_1;
-	configPinsel1.Pinmode = 1;
-	configPinsel1.OpenDrain = PINSEL_PINMODE_OPENDRAIN;
-	PINSEL_ConfigPin(&configPinsel1);
-	
-	configPinsel1.Portnum = PINSEL_PORT_0;
-	configPinsel1.Pinnum = PINSEL_PIN_28;
-	configPinsel1.Funcnum = PINSEL_FUNC_1;
-	configPinsel1.Pinmode = 1; // deja une resistance de pull up dans les circuits
-	configPinsel1.OpenDrain = PINSEL_PINMODE_OPENDRAIN;
-	PINSEL_ConfigPin(&configPinsel1);
-	
-	// Boutons
-	
-	GPIO_SetDir (2,(1<<10),0);  /* PORT2.10 defined as input        */
-	GPIO_SetDir (2,(1<<11),0);  /* PORT2.11 defined as input        */
+    PINSEL_CFG_Type config_broche_i2c; 
 
+    // Initialisation GPIO2.10 en entrée pour le bouton
+    GPIO_SetDir(BUTTON_PORT, (1 << BUTTON_PIN), 0);
+
+    // Initialisation des broches I2C (P0.27 et P0.28)
+    config_broche_i2c.Portnum = PINSEL_PORT_0;
+    config_broche_i2c.Pinnum = I2C_SDA_PIN;
+    config_broche_i2c.Funcnum = PINSEL_FUNC_1;
+    config_broche_i2c.Pinmode = PINSEL_PINMODE_PULLUP;
+    config_broche_i2c.OpenDrain = PINSEL_PINMODE_NORMAL;
+    PINSEL_ConfigPin(&config_broche_i2c);
+
+    config_broche_i2c.Pinnum = I2C_SCL_PIN;
+    PINSEL_ConfigPin(&config_broche_i2c);
 }

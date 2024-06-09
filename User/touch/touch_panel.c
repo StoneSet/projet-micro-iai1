@@ -14,7 +14,7 @@ SSP_DATA_SETUP_Type LCDSPI1Data;
 
 uint8_t SPI_WriteByte(uint8_t data)
 {
-    uint8_t touch_data_tx[BUF_SIZE];
+    //uint8_t touch_data_tx[BUF_SIZE];
     uint8_t touch_data_rx[BUF_SIZE];
     uint8_t rl;
 

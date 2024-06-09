@@ -319,7 +319,6 @@ void lcd_gram_test(void)
     }
 }
 
-
 void lcd_Initializtion(void)
 {
     lcd_port_init();
@@ -667,7 +666,7 @@ void lcd_Initializtion(void)
         //数据总线测试,用于测试硬件连接是否正常.
         lcd_data_bus_test();
         //清屏
-        lcd_clear( Blue );
+        lcd_clear( Grey );
         //return ;
     }
 

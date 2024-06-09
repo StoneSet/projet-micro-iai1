@@ -10,6 +10,7 @@
 ".\output\lpc17xx_nvic.o"
 ".\output\lpc17xx_ssp.o"
 ".\output\lpc17xx_i2c.o"
+".\output\gestion_i2c.o"
 ".\output\main.o"
 ".\output\ili_lcd_general.o"
 ".\output\lcd_api.o"
@@ -17,6 +18,7 @@
 ".\output\affichagelcd.o"
 ".\output\touch_panel.o"
 ".\output\gestion_pinsel.o"
+".\output\gestion_timer.o"
 --strict --scatter ".\Output\Project.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
